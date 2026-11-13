@@ -1,0 +1,103 @@
+{
+  "review_basis": "Visual inspection of receipt images against committed predictions and frozen annotations; independent of LLM judge",
+  "entries": [
+    {
+      "case_id": "cord_held_out_000",
+      "backends": [
+        "qwen",
+        "docling_text_llm"
+      ],
+      "fields": [
+        "line_total",
+        "subtotal",
+        "tax_amount",
+        "total_amount"
+      ],
+      "category": "reasoning",
+      "status": "visually_confirmed",
+      "observation": "Printed amounts use dot grouping (60.000 and 5.455), while returned numeric values are 60.0 and 5.455. The scorer expects 60000 and 5455; these are magnitude errors, not mere JSON formatting differences. The judge incorrectly described those differences as harmless formatting.",
+      "image": "evals/cord/held_out/cord_held_out_000.png",
+      "image_sha256": "8612d04b70f430f3aef07fbbd5200e382dcc4152b344cc2eff9f735f05a257c8"
+    },
+    {
+      "case_id": "cord_held_out_000",
+      "backends": [
+        "gemini"
+      ],
+      "fields": [
+        "unit_price"
+      ],
+      "category": "annotation_gap",
+      "status": "possible_annotation_gap",
+      "observation": "The image visibly contains two 60.000 amounts on the item row, but the CORD parse does not annotate menu.unitprice. A prediction of 60000 is scored as an extra against the frozen annotations; the image does not justify treating it as a proven hallucination. The column heading is not visible, so exact role remains uncertain.",
+      "image": "evals/cord/held_out/cord_held_out_000.png",
+      "image_sha256": "8612d04b70f430f3aef07fbbd5200e382dcc4152b344cc2eff9f735f05a257c8"
+    },
+    {
+      "case_id": "cord_held_out_001",
+      "backends": [
+        "gemini",
+        "qwen",
+        "docling_text_llm"
+      ],
+      "fields": [
+        "quantity",
+        "unit_price",
+        "subtotal"
+      ],
+      "category": "reasoning",
+      "status": "visually_confirmed",
+      "observation": "The receipt displays description/amount rows and TOTAL/CASH 91000, with no printed quantity or unit-price column and no separate subtotal. All three adapters infer quantity 1, reuse line amounts as unit prices, and copy total into subtotal. This is a schema/abstention limitation as well as unsupported reasoning.",
+      "image": "evals/cord/held_out/cord_held_out_001.png",
+      "image_sha256": "5852cbe48df03646524e717e987eb3d0ac329a52fd192070b5fda1222a053789"
+    },
+    {
+      "case_id": "cord_held_out_002",
+      "backends": [
+        "gemini",
+        "qwen"
+      ],
+      "fields": [
+        "description",
+        "quantity",
+        "line_total"
+      ],
+      "category": "layout",
+      "status": "visually_confirmed",
+      "observation": "The receipt has one numbered drink and an indented Coconut Jelly add-on with its own amount but no separate quantity; TOTAL ITEMS is one. Both vision adapters promote the add-on to a separate main line with quantity one. The benchmark maps main menu fields and excludes add-on labels, so this is a parent/child layout and schema-mapping limitation.",
+      "image": "evals/cord/held_out/cord_held_out_002.png",
+      "image_sha256": "571ac6af26e75de8c06747a8c536c778f19a4562879090813571eddc74603d34"
+    },
+    {
+      "case_id": "cord_held_out_014",
+      "backends": [
+        "qwen"
+      ],
+      "fields": [
+        "description"
+      ],
+      "category": "OCR",
+      "status": "visually_confirmed",
+      "observation": "The printed rows read Mushroom Soup and Chamomile. Qwen returns Nushroom Soup and Chamonile, character substitutions that disagree with both the visible receipt and the frozen labels. The classification identifies transcription errors in the pipeline; it does not isolate whether Docling or the VLM caused them.",
+      "image": "evals/cord/held_out/cord_held_out_014.png",
+      "image_sha256": "9dcf1f9f86c909b762767cb07d1cc0db30773d556154ce42e0210f65270ee39d"
+    },
+    {
+      "case_id": "cord_held_out_013",
+      "backends": [
+        "gemini",
+        "qwen",
+        "docling_text_llm"
+      ],
+      "fields": [
+        "subtotal"
+      ],
+      "category": "schema",
+      "status": "visually_confirmed_schema_ceiling",
+      "observation": "The receipt repeats the same base amount in TOTAL and DPP. CORD annotates both as subtotal values. The original label adapter incorrectly nested this list; the corrected adapter preserves two values. The output schema has a scalar subtotal and cannot represent both annotated regions, so multiset scoring necessarily records a missed occurrence. This is a representation ceiling rather than invalid returned JSON.",
+      "image": "evals/cord/held_out/cord_held_out_013.png",
+      "image_sha256": "ca4bf89562b3f55c2c91968ca221a629e48386744a5322596d9c7345648ada13"
+    }
+  ],
+  "limitation": "Selected examples reviewed, not a complete manual relabeling. Metrics remain unchanged against official annotations."
+}

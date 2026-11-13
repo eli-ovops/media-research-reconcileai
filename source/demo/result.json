@@ -1,0 +1,301 @@
+{
+  "invoice": {
+    "document_id": "sample_invoice",
+    "document_type": "invoice",
+    "document_number": "INV-SAMPLE",
+    "document_date": null,
+    "vendor_name": "Kaveri Network Systems",
+    "buyer_name": "Meridian Operations Pvt Ltd",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_id": null,
+        "sku": "SKU-42",
+        "description": "Network appliance",
+        "quantity": 10.0,
+        "unit_price": 550.0,
+        "total_price": 5500.0,
+        "evidence": {
+          "document_id": "sample_invoice",
+          "page": 1,
+          "text": "SKU-42 Network appliance 10 550.00 5500.00",
+          "bbox": [
+            0.08,
+            0.21,
+            0.91,
+            0.24
+          ],
+          "confidence": 1.0
+        }
+      }
+    ],
+    "subtotal": 5500.0,
+    "tax_amount": null,
+    "total_amount": 5500.0,
+    "field_evidence": {
+      "document_number": {
+        "document_id": "sample_invoice",
+        "page": 1,
+        "text": "INV-SAMPLE",
+        "bbox": [
+          0.7738190678863262,
+          0.06262098976606556,
+          0.873100826976739,
+          0.07139887840103487
+        ],
+        "confidence": 1.0
+      },
+      "vendor_name": {
+        "document_id": "sample_invoice",
+        "page": 1,
+        "text": "Vendor: Kaveri Network Systems",
+        "bbox": [
+          0.12605926435930706,
+          0.0935038926243783,
+          0.3717941770707357,
+          0.10463368239090787
+        ],
+        "confidence": 1.0
+      },
+      "buyer_name": {
+        "document_id": "sample_invoice",
+        "page": 1,
+        "text": "Buyer: Meridian Operations Pvt Ltd",
+        "bbox": [
+          0.12721839547749178,
+          0.11249693878039269,
+          0.38620764698433663,
+          0.1236385456883311
+        ],
+        "confidence": 1.0
+      },
+      "currency": {
+        "document_id": "sample_invoice",
+        "page": 1,
+        "text": "Currency: INR",
+        "bbox": [
+          0.12683201416590492,
+          0.13151361921922478,
+          0.23217816680927245,
+          0.14264340898575434
+        ],
+        "confidence": 1.0
+      },
+      "subtotal": {
+        "document_id": "sample_invoice",
+        "page": 1,
+        "text": "Subtotal: 5500.00",
+        "bbox": [
+          0.7364414213274999,
+          0.25504523065247586,
+          0.8731848011815858,
+          0.2638350089266541
+        ],
+        "confidence": 1.0
+      },
+      "total_amount": {
+        "document_id": "sample_invoice",
+        "page": 1,
+        "text": "Total: 5500.00",
+        "bbox": [
+          0.7632525188416481,
+          0.2753448321610681,
+          0.8731848011815858,
+          0.2840157865409574
+        ],
+        "confidence": 1.0
+      }
+    },
+    "review_flags": [],
+    "provider_metadata": {}
+  },
+  "purchase_order": {
+    "document_id": "sample_purchase_order",
+    "document_type": "purchase_order",
+    "document_number": "PO-SAMPLE",
+    "document_date": null,
+    "vendor_name": "Kaveri Network Systems",
+    "buyer_name": "Meridian Operations Pvt Ltd",
+    "currency": "INR",
+    "line_items": [
+      {
+        "line_id": null,
+        "sku": "SKU-42",
+        "description": "Network appliance",
+        "quantity": 10.0,
+        "unit_price": 500.0,
+        "total_price": 5000.0,
+        "evidence": {
+          "document_id": "sample_purchase_order",
+          "page": 1,
+          "text": "SKU-42 Network appliance 10 500.00 5000.00",
+          "bbox": [
+            0.08,
+            0.21,
+            0.91,
+            0.24
+          ],
+          "confidence": 1.0
+        }
+      }
+    ],
+    "subtotal": 5000.0,
+    "tax_amount": null,
+    "total_amount": 5000.0,
+    "field_evidence": {
+      "document_number": {
+        "document_id": "sample_purchase_order",
+        "page": 1,
+        "text": "PO-SAMPLE",
+        "bbox": [
+          0.7772796458933897,
+          0.0626091726246567,
+          0.873100826976739,
+          0.07139887840103487
+        ],
+        "confidence": 1.0
+      },
+      "vendor_name": {
+        "document_id": "sample_purchase_order",
+        "page": 1,
+        "text": "Vendor: Kaveri Network Systems",
+        "bbox": [
+          0.12605926435930706,
+          0.0935038926243783,
+          0.3717941770707357,
+          0.10463368239090787
+        ],
+        "confidence": 1.0
+      },
+      "buyer_name": {
+        "document_id": "sample_purchase_order",
+        "page": 1,
+        "text": "Buyer: Meridian Operations Pvt Ltd",
+        "bbox": [
+          0.12721839547749178,
+          0.11249693878039269,
+          0.38620764698433663,
+          0.1236385456883311
+        ],
+        "confidence": 1.0
+      },
+      "currency": {
+        "document_id": "sample_purchase_order",
+        "page": 1,
+        "text": "Currency: INR",
+        "bbox": [
+          0.12683201416590492,
+          0.13151361921922478,
+          0.23217816680927245,
+          0.14264340898575434
+        ],
+        "confidence": 1.0
+      },
+      "subtotal": {
+        "document_id": "sample_purchase_order",
+        "page": 1,
+        "text": "Subtotal: 5000.00",
+        "bbox": [
+          0.7364414213274999,
+          0.25504523065247586,
+          0.8731848011815858,
+          0.2638350089266541
+        ],
+        "confidence": 1.0
+      },
+      "total_amount": {
+        "document_id": "sample_purchase_order",
+        "page": 1,
+        "text": "Total: 5000.00",
+        "bbox": [
+          0.7632525188416481,
+          0.2753448321610681,
+          0.8731848011815858,
+          0.2840157865409574
+        ],
+        "confidence": 1.0
+      }
+    },
+    "review_flags": [],
+    "provider_metadata": {}
+  },
+  "discrepancies": [
+    {
+      "discrepancy_id": "sample_1",
+      "type": "unit_price_mismatch",
+      "severity": "critical",
+      "message": "Unit price differs for Network appliance",
+      "expected": 500.0,
+      "actual": 550.0,
+      "financial_impact": 500.0,
+      "invoice_evidence": {
+        "document_id": "sample_invoice",
+        "page": 1,
+        "text": "SKU-42 Network appliance 10 550.00 5500.00",
+        "bbox": [
+          0.08,
+          0.21,
+          0.91,
+          0.24
+        ],
+        "confidence": 1.0
+      },
+      "purchase_order_evidence": {
+        "document_id": "sample_purchase_order",
+        "page": 1,
+        "text": "SKU-42 Network appliance 10 500.00 5000.00",
+        "bbox": [
+          0.08,
+          0.21,
+          0.91,
+          0.24
+        ],
+        "confidence": 1.0
+      },
+      "requires_review": false
+    },
+    {
+      "discrepancy_id": "sample_2",
+      "type": "line_total_mismatch",
+      "severity": "warning",
+      "message": "Line total differs for Network appliance",
+      "expected": 5000.0,
+      "actual": 5500.0,
+      "financial_impact": 0.0,
+      "invoice_evidence": {
+        "document_id": "sample_invoice",
+        "page": 1,
+        "text": "SKU-42 Network appliance 10 550.00 5500.00",
+        "bbox": [
+          0.08,
+          0.21,
+          0.91,
+          0.24
+        ],
+        "confidence": 1.0
+      },
+      "purchase_order_evidence": {
+        "document_id": "sample_purchase_order",
+        "page": 1,
+        "text": "SKU-42 Network appliance 10 500.00 5000.00",
+        "bbox": [
+          0.08,
+          0.21,
+          0.91,
+          0.24
+        ],
+        "confidence": 1.0
+      },
+      "requires_review": false
+    }
+  ],
+  "summary": {
+    "matched_items": 1,
+    "invoice_items": 1,
+    "purchase_order_items": 1,
+    "discrepancy_count": 2,
+    "financial_impact": 500.0,
+    "status": "discrepancies_found"
+  },
+  "reviewer_edits": []
+}

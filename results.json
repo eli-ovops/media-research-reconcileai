@@ -1,0 +1,143 @@
+{
+  "source_commit": "b9b5de7bd2bbfcfd4719c895c1ee31e566f2a7f9",
+  "live_model_calls": 0,
+  "live_ocr_tested": false,
+  "cases": [
+    {
+      "case": "clean",
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "job_id": "local-clean"
+    },
+    {
+      "case": "unit_price",
+      "expected": [
+        "line_total_mismatch",
+        "unit_price_mismatch"
+      ],
+      "actual": [
+        "line_total_mismatch",
+        "unit_price_mismatch"
+      ],
+      "passed": true,
+      "job_id": "local-unit_price"
+    },
+    {
+      "case": "quantity",
+      "expected": [
+        "line_total_mismatch",
+        "quantity_mismatch"
+      ],
+      "actual": [
+        "line_total_mismatch",
+        "quantity_mismatch"
+      ],
+      "passed": true,
+      "job_id": "local-quantity"
+    },
+    {
+      "case": "currency",
+      "expected": [
+        "currency_mismatch"
+      ],
+      "actual": [
+        "currency_mismatch"
+      ],
+      "passed": true,
+      "job_id": "local-currency"
+    },
+    {
+      "case": "missing",
+      "expected": [
+        "missing_item"
+      ],
+      "actual": [
+        "missing_item"
+      ],
+      "passed": true,
+      "job_id": "local-missing"
+    },
+    {
+      "case": "arithmetic",
+      "expected": [
+        "arithmetic_error",
+        "line_total_mismatch"
+      ],
+      "actual": [
+        "arithmetic_error",
+        "line_total_mismatch"
+      ],
+      "passed": true,
+      "job_id": "local-arithmetic"
+    },
+    {
+      "case": "chinese_vendor",
+      "expected": [
+        "vendor_mismatch"
+      ],
+      "actual": [],
+      "passed": false,
+      "job_id": "local-chinese_vendor"
+    },
+    {
+      "case": "fractional_quantity",
+      "expected": [],
+      "actual": [
+        "arithmetic_error"
+      ],
+      "passed": false,
+      "job_id": "local-fractional_quantity"
+    }
+  ],
+  "case_passes": 6,
+  "case_count": 8,
+  "review_cases": [
+    {
+      "case": "clean",
+      "after_discrepancy_count": 0,
+      "audit_and_export_passed": true
+    },
+    {
+      "case": "unit_price",
+      "after_discrepancy_count": 0,
+      "audit_and_export_passed": true
+    },
+    {
+      "case": "quantity",
+      "after_discrepancy_count": 0,
+      "audit_and_export_passed": true
+    },
+    {
+      "case": "currency",
+      "after_discrepancy_count": 0,
+      "audit_and_export_passed": true
+    },
+    {
+      "case": "missing",
+      "after_discrepancy_count": 0,
+      "audit_and_export_passed": true
+    },
+    {
+      "case": "arithmetic",
+      "after_discrepancy_count": 0,
+      "audit_and_export_passed": true
+    }
+  ],
+  "sample_preview": {
+    "png_endpoints_pass": true,
+    "highlight_changes_pixels": true,
+    "source_bbox": [
+      0.08,
+      0.21,
+      0.91,
+      0.24
+    ],
+    "initial_findings": 2
+  },
+  "limits": [
+    "Preset extraction, no model/Docling evaluation",
+    "Review edits are synthetic changes, not verified factual corrections",
+    "No real customer documents or production security acceptance"
+  ]
+}

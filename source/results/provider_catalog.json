@@ -1,0 +1,21 @@
+{
+  "lookup_at_utc": "2026-10-06T07:49:55.316856+00:00",
+  "provider": "groq",
+  "endpoint": "https://api.groq.com/openai/v1",
+  "source": "https://api.groq.com/openai/v1/models",
+  "id": "qwen/qwen3.8-27b",
+  "name": "Qwen/Qwen3.8-27B",
+  "pricing": {
+    "prompt": "8.000000000000001e-07",
+    "completion": "4e-06"
+  },
+  "price_source": "configured per-million-token rates",
+  "context_length": 131072,
+  "input_modalities": [
+    "text",
+    "image"
+  ],
+  "vision_status": "catalogue advertises images",
+  "created": 1786984846,
+  "max_images_per_request": 3
+}

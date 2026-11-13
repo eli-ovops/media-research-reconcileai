@@ -1,0 +1,23 @@
+{
+  "documents": [
+    {
+      "path": "demo/invoice.pdf",
+      "sha256": "f72659f403611c261c9cc4c518724149236d916b51226ba3e070875114f04d2b",
+      "pages": 1,
+      "characters": 231,
+      "evidence_regions": 5,
+      "latency_seconds": 39.01476050000019
+    },
+    {
+      "path": "evals/cord/held_out/cord_held_out_000.png",
+      "sha256": "8612d04b70f430f3aef07fbbd5200e382dcc4152b344cc2eff9f735f05a257c8",
+      "pages": 1,
+      "characters": 383,
+      "evidence_regions": 1,
+      "latency_seconds": 12.225370899999689
+    }
+  ],
+  "docling_version": "2.134.0",
+  "model_quality_measured": false,
+  "rerun": "python scripts/verify_results.py --with-docling"
+}

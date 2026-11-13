@@ -1,0 +1,194 @@
+{
+  "invoice": {
+    "document_id": "invoice",
+    "document_type": "invoice",
+    "document_number": "DEMO-invoice",
+    "document_date": null,
+    "vendor_name": "Demo Vendor",
+    "buyer_name": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "line_id": null,
+        "sku": "SKU-A",
+        "description": "Widget",
+        "quantity": 10.0,
+        "unit_price": 10.0,
+        "total_price": 90.0,
+        "evidence": {
+          "document_id": "invoice",
+          "page": 1,
+          "text": "SKU-A Widget Qty 10 Price 10 Total 90",
+          "bbox": [
+            0.07433823354883132,
+            0.18179421473031088,
+            0.387334910872715,
+            0.19482198387685445
+          ],
+          "confidence": 1.0
+        }
+      }
+    ],
+    "subtotal": 90.0,
+    "tax_amount": null,
+    "total_amount": 90.0,
+    "field_evidence": {
+      "vendor_name": {
+        "document_id": "invoice",
+        "page": 1,
+        "text": "Vendor: Demo Vendor",
+        "bbox": [
+          0.07360130509519888,
+          0.1062172013099747,
+          0.2526029200335733,
+          0.11631435818142366
+        ],
+        "confidence": 1.0
+      },
+      "currency": {
+        "document_id": "invoice",
+        "page": 1,
+        "text": "Currency: USD",
+        "bbox": [
+          0.07442810332853031,
+          0.14392929847794345,
+          0.1934150371676177,
+          0.1569431959980666
+        ],
+        "confidence": 1.0
+      }
+    },
+    "review_flags": [],
+    "provider_metadata": {}
+  },
+  "purchase_order": {
+    "document_id": "purchase_order",
+    "document_type": "purchase_order",
+    "document_number": "DEMO-purchase_order",
+    "document_date": null,
+    "vendor_name": "Demo Vendor",
+    "buyer_name": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "line_id": null,
+        "sku": "SKU-A",
+        "description": "Widget",
+        "quantity": 10.0,
+        "unit_price": 10.0,
+        "total_price": 100.0,
+        "evidence": {
+          "document_id": "purchase_order",
+          "page": 1,
+          "text": "SKU-A Widget Qty 10 Price 10 Total 100",
+          "bbox": [
+            0.07433823354883132,
+            0.18179421473031088,
+            0.39732837053685405,
+            0.19482198387685445
+          ],
+          "confidence": 1.0
+        }
+      }
+    ],
+    "subtotal": 100.0,
+    "tax_amount": null,
+    "total_amount": 100.0,
+    "field_evidence": {
+      "vendor_name": {
+        "document_id": "purchase_order",
+        "page": 1,
+        "text": "Vendor: Demo Vendor",
+        "bbox": [
+          0.07360130509519888,
+          0.1062172013099747,
+          0.2526029200335733,
+          0.11631435818142366
+        ],
+        "confidence": 1.0
+      },
+      "currency": {
+        "document_id": "purchase_order",
+        "page": 1,
+        "text": "Currency: USD",
+        "bbox": [
+          0.07442810332853031,
+          0.14392929847794345,
+          0.1934150371676177,
+          0.1569431959980666
+        ],
+        "confidence": 1.0
+      }
+    },
+    "review_flags": [],
+    "provider_metadata": {}
+  },
+  "discrepancies": [
+    {
+      "discrepancy_id": "disc_e8df7c4247",
+      "type": "arithmetic_error",
+      "severity": "critical",
+      "message": "Invoice line total does not equal quantity × unit price: Widget",
+      "expected": 100.0,
+      "actual": 90.0,
+      "financial_impact": 0.0,
+      "invoice_evidence": {
+        "document_id": "invoice",
+        "page": 1,
+        "text": "SKU-A Widget Qty 10 Price 10 Total 90",
+        "bbox": [
+          0.07433823354883132,
+          0.18179421473031088,
+          0.387334910872715,
+          0.19482198387685445
+        ],
+        "confidence": 1.0
+      },
+      "purchase_order_evidence": null,
+      "requires_review": false
+    },
+    {
+      "discrepancy_id": "disc_2fa980c153",
+      "type": "line_total_mismatch",
+      "severity": "warning",
+      "message": "Line total differs for Widget",
+      "expected": 100.0,
+      "actual": 90.0,
+      "financial_impact": 0.0,
+      "invoice_evidence": {
+        "document_id": "invoice",
+        "page": 1,
+        "text": "SKU-A Widget Qty 10 Price 10 Total 90",
+        "bbox": [
+          0.07433823354883132,
+          0.18179421473031088,
+          0.387334910872715,
+          0.19482198387685445
+        ],
+        "confidence": 1.0
+      },
+      "purchase_order_evidence": {
+        "document_id": "purchase_order",
+        "page": 1,
+        "text": "SKU-A Widget Qty 10 Price 10 Total 100",
+        "bbox": [
+          0.07433823354883132,
+          0.18179421473031088,
+          0.39732837053685405,
+          0.19482198387685445
+        ],
+        "confidence": 1.0
+      },
+      "requires_review": false
+    }
+  ],
+  "summary": {
+    "matched_items": 1,
+    "invoice_items": 1,
+    "purchase_order_items": 1,
+    "discrepancy_count": 2,
+    "financial_impact": 0.0,
+    "status": "discrepancies_found"
+  },
+  "reviewer_edits": []
+}

@@ -1,0 +1,4 @@
+-r requirements.txt
+matplotlib>=3.9
+huggingface_hub>=0.26
+pyarrow>=18

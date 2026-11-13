@@ -1,0 +1,616 @@
+{
+  "run_at_utc": "2026-10-06T09:14:21.065164+00:00",
+  "environment": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "source_sha256": {
+    "scripts/verify_results.py": "2b84e626259b1526628f9f3bc21f608cb2a7fa14897abd384245cf3ac1b502db",
+    "src/reconciliation/engine.py": "1d12fcdb7921e7100a392d756f7ebc0607f9a6ef9b3a1c223cda92b4aa55cc51",
+    "src/main.py": "288404add6a9bbcdc5339cda7f97c19ba1fdfbb18e0707e163e414866b851e38",
+    "tests/test_real_eval_and_batch.py": "9d721c9e3c4c9d7fe24950832f3b939afabdebb38a31103c26be619664df186c"
+  },
+  "benchmark_sha256": "c2db2aacedad1f4e9f160e58776f43fd1b1b6bc99011cf279daa0541a21510f8",
+  "synthetic_pairs": 50,
+  "synthetic_scenarios": 4,
+  "fixture_cases_passed": 50,
+  "model_quality_measured": false,
+  "sample_findings": 2,
+  "tests_passed": 39,
+  "test_cases": [
+    "tests.test_api.test_health_and_ui",
+    "tests.test_api.test_upload_rejects_unsupported_files",
+    "tests.test_api.test_upload_rejects_malformed_document",
+    "tests.test_api.test_oversized_second_upload_removes_first_document",
+    "tests.test_api.test_prerecorded_sample_opens_without_model_and_can_export",
+    "tests.test_api.test_review_reruns_controls_and_records_audit",
+    "tests.test_api.test_lifespan_resumes_incomplete_job",
+    "tests.test_api.test_provider_timeout_is_persisted_as_job_failure",
+    "tests.test_evaluation.test_row_score_checks_amount_and_evidence_location",
+    "tests.test_real_eval_and_batch.test_field_scores_preserve_duplicates_and_penalize_failures",
+    "tests.test_real_eval_and_batch.test_cord_labels_exclude_keys_and_use_actual_sub_total_category",
+    "tests.test_real_eval_and_batch.test_calibration_includes_endpoints_and_does_not_split_ties",
+    "tests.test_real_eval_and_batch.test_batch_validation_worker_limit_sse_failure_and_persistence",
+    "tests.test_real_eval_and_batch.test_low_source_confidence_routes_to_review",
+    "tests.test_real_eval_and_batch.test_sample_highlights_precomputed_source",
+    "tests.test_real_eval_and_batch.test_groq_response_cache_skips_second_model_call",
+    "tests.test_real_eval_and_batch.test_gemini_text_only_and_raw_cache",
+    "tests.test_real_eval_and_batch.test_diagnostic_judge_is_blinded_and_does_not_change_scores",
+    "tests.test_real_eval_and_batch.test_comparison_reuses_actual_ocr_and_its_latency",
+    "tests.test_real_eval_and_batch.test_space_upload_allowlist_excludes_secrets_and_provider_code",
+    "tests.test_real_eval_and_batch.test_vlm_settings_and_catalogue_without_architecture",
+    "tests.test_real_eval_and_batch.test_vlm_pdf_limit_preserves_all_accepted_pages",
+    "tests.test_real_eval_and_batch.test_offline_rescore_accepts_git_line_endings_without_api",
+    "tests.test_real_eval_and_batch.test_offline_label_migration_only_allows_verified_list_flattening",
+    "tests.test_real_extraction_support.test_evidence_is_resolved_from_parser_coordinates",
+    "tests.test_real_extraction_support.test_gemini_request_timeout_is_bounded_and_propagated",
+    "tests.test_real_extraction_support.test_gemini_429_backoff_and_cache",
+    "tests.test_real_extraction_support.test_daily_quota_array_response_blocks_new_requests",
+    "tests.test_real_extraction_support.test_paid_equivalent_guard_also_applies_to_free_keys",
+    "tests.test_real_extraction_support.test_attempt_summary_counts_failures_and_backoff",
+    "tests.test_real_extraction_support.test_missing_headers_force_review_and_schema_failure_keeps_costs",
+    "tests.test_reconciliation.test_matching_documents_have_no_discrepancies",
+    "tests.test_reconciliation.test_overcharge_is_detected_with_financial_impact_and_evidence",
+    "tests.test_reconciliation.test_missing_and_ambiguous_items_require_review",
+    "tests.test_reconciliation.test_missing_source_evidence_requires_review",
+    "tests.test_reconciliation.test_document_arithmetic_error_is_reported",
+    "tests.test_reconciliation.test_currency_mismatch_does_not_compare_incomparable_prices",
+    "tests.test_storage.test_job_store_persists_result",
+    "tests.test_storage.test_incomplete_jobs_are_available_for_restart_recovery"
+  ],
+  "batch_fixture": {
+    "documents": 6,
+    "completed": 5,
+    "failed": 1,
+    "max_concurrent_workers": 2,
+    "provider": "stub; tests queue/SSE/failure contracts only"
+  },
+  "cases": [
+    {
+      "case_id": "case_001",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_002",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_003",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_004",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_005",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_006",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_007",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_008",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_009",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_010",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_011",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_012",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_013",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_014",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_015",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_016",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_017",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_018",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_019",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_020",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_021",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_022",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_023",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_024",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_025",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_026",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_027",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_028",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_029",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_030",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_031",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_032",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_033",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_034",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_035",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_036",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_037",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_038",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_039",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_040",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_041",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_042",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_043",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_044",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_045",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_046",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_047",
+      "scenario": "quantity_mismatch",
+      "expected": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "quantity_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_048",
+      "scenario": "missing_item",
+      "expected": {
+        "missing_item": 1
+      },
+      "predicted": {
+        "missing_item": 1
+      },
+      "passed": true
+    },
+    {
+      "case_id": "case_049",
+      "scenario": "clean",
+      "expected": {},
+      "predicted": {},
+      "passed": true
+    },
+    {
+      "case_id": "case_050",
+      "scenario": "unit_price_mismatch",
+      "expected": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "predicted": {
+        "unit_price_mismatch": 1,
+        "line_total_mismatch": 1
+      },
+      "passed": true
+    }
+  ],
+  "rerun": "python scripts/verify_results.py"
+}

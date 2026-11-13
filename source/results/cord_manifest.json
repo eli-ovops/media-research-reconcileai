@@ -1,0 +1,1150 @@
+{
+  "dataset": "naver-clova-ix/cord-v2",
+  "revision": "7f0115a4b758a71d6473b8d085751692da2fef98",
+  "license": "CC-BY-4.0",
+  "attribution": "Park et al., CORD: A Consolidated Receipt Dataset for Post-OCR Parsing (2019)",
+  "source": "https://github.com/clovaai/cord",
+  "selection": "first N rows per official split",
+  "limit_per_split": 20,
+  "fields": {
+    "menu.nm": "description",
+    "menu.cnt": "quantity",
+    "menu.unitprice": "unit_price",
+    "menu.price": "line_total",
+    "sub_total.subtotal_price": "subtotal",
+    "sub_total.tax_price": "tax_amount",
+    "total.total_price": "total_amount"
+  },
+  "cases": [
+    {
+      "case_id": "cord_development_000",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_000.png",
+      "sha256": "2423ea6be07e0d8a8c0d041c70f6880e68b424f5efb02b0568a517074af04db7",
+      "expected": {
+        "description": [
+          "REAL GANACHE",
+          "EGG TART",
+          "PIZZA TOAST"
+        ],
+        "quantity": [
+          "1",
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "16,500",
+          "13,000",
+          "16,000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "45,500"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_001",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_001.png",
+      "sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "expected": {
+        "description": [
+          "Kopi Susu Kolonel"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "23.000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "23.000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_002",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_002.png",
+      "sha256": "3d9bdf850a9b04fc1faf023667225c28af4c75d62511c6c410ee34ad801dfd95",
+      "expected": {
+        "description": [
+          "S-Ovaltine 50%"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [
+          "20,000"
+        ],
+        "line_total": [
+          "20,000"
+        ],
+        "subtotal": [
+          "18,181"
+        ],
+        "tax_amount": [
+          "1,818"
+        ],
+        "total_amount": [
+          "20,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_003",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_003.png",
+      "sha256": "e2dfa54e0af1fe1234e98d45026c7b7f82db7bb0299196b8f4fe4b29ee8b218b",
+      "expected": {
+        "description": [
+          "M-Caramel Black Tea"
+        ],
+        "quantity": [
+          "1X"
+        ],
+        "unit_price": [
+          "@28,000"
+        ],
+        "line_total": [
+          "28,000"
+        ],
+        "subtotal": [
+          "28,000"
+        ],
+        "tax_amount": [
+          "0"
+        ],
+        "total_amount": [
+          "28,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_004",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_004.png",
+      "sha256": "395a4aada020d241e38ab175c6b2c230897d0197b3e78a14a6de763ad192ea2a",
+      "expected": {
+        "description": [
+          "BBQ Chicken"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "41,000"
+        ],
+        "subtotal": [
+          "41,000"
+        ],
+        "tax_amount": [],
+        "total_amount": [
+          "41,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_005",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_005.png",
+      "sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "expected": {
+        "description": [
+          "LE MINERAL"
+        ],
+        "quantity": [
+          "1.00"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "8,000"
+        ],
+        "subtotal": [
+          "7,273"
+        ],
+        "tax_amount": [
+          "727"
+        ],
+        "total_amount": [
+          "8,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_006",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_006.png",
+      "sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "expected": {
+        "description": [
+          "POTATO SAUSAGE BREAD",
+          "OREO GREEN TEA SPREAD",
+          "WHITE CHOCO BANANA SPREAD"
+        ],
+        "quantity": [
+          "1",
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "19,000",
+          "52,000",
+          "52,000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "123,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_007",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_007.png",
+      "sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "expected": {
+        "description": [
+          "Choco Devil"
+        ],
+        "quantity": [
+          "4"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "63,636"
+        ],
+        "subtotal": [
+          "63,636"
+        ],
+        "tax_amount": [
+          "5,409"
+        ],
+        "total_amount": [
+          "59,500"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_008",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_008.png",
+      "sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "expected": {
+        "description": [
+          "TALAM UNGU",
+          "MIKA KECIL"
+        ],
+        "quantity": [
+          "3X",
+          "1X"
+        ],
+        "unit_price": [
+          "@6500",
+          "@0"
+        ],
+        "line_total": [
+          "19,500",
+          "0"
+        ],
+        "subtotal": [
+          "11,700"
+        ],
+        "tax_amount": [],
+        "total_amount": [
+          "11,700"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_009",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_009.png",
+      "sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "expected": {
+        "description": [
+          "Tahu Ikan Oma Giok"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "20,000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "20,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_010",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_010.png",
+      "sha256": "15c42233c76b935d24145b1f75625692f6b58d855ba85657076701c78c404826",
+      "expected": {
+        "description": [
+          "Serbu 1",
+          "Choco Peanut Bread"
+        ],
+        "quantity": [
+          "2",
+          "2"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "40.000",
+          "20.000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "60.000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_011",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_011.png",
+      "sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "expected": {
+        "description": [
+          "Se'I Sapi Sambal Matah ( R )",
+          "Se'I Sapi Lada Hitam (J)",
+          "Nasi Putih",
+          "Milk Shake Coklat"
+        ],
+        "quantity": [
+          "1",
+          "1",
+          "2",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "20.000",
+          "35.000",
+          "10.000",
+          "16.000"
+        ],
+        "subtotal": [
+          "81.000"
+        ],
+        "tax_amount": [
+          "8.100"
+        ],
+        "total_amount": [
+          "89.100"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_012",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_012.png",
+      "sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "expected": {
+        "description": [
+          "ES KOPI SUSU"
+        ],
+        "quantity": [
+          "4"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "72.000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "72.000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_013",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_013.png",
+      "sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "expected": {
+        "description": [
+          "MINERAL 600 ML",
+          "BULGOGI RICE R"
+        ],
+        "quantity": [
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "7,727",
+          "33,636"
+        ],
+        "subtotal": [
+          "41,364"
+        ],
+        "tax_amount": [
+          "4,136"
+        ],
+        "total_amount": [
+          "45,500"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_014",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_014.png",
+      "sha256": "2811d54a6abdb3559fadb49e83b4da9790a9a9986bdd321c794e2f3f4e513dd8",
+      "expected": {
+        "description": [
+          "Arem Arem",
+          "Kroket"
+        ],
+        "quantity": [
+          "2 x",
+          "1 x"
+        ],
+        "unit_price": [
+          "@ 12.000",
+          "@ 12.000"
+        ],
+        "line_total": [
+          "24.000",
+          "12.000"
+        ],
+        "subtotal": [
+          "Rp 36.000"
+        ],
+        "tax_amount": [
+          "Rp 3.600"
+        ],
+        "total_amount": [
+          "Rp 39.600"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_015",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_015.png",
+      "sha256": "20a241dd04301f4284696c507bc706df6fe4d2800750799d05076cfe0e162d8f",
+      "expected": {
+        "description": [
+          "Arem Arem",
+          "Pepenero Pastel"
+        ],
+        "quantity": [
+          "2",
+          "2"
+        ],
+        "unit_price": [
+          "12.000",
+          "15.000"
+        ],
+        "line_total": [
+          "24.000",
+          "30.000"
+        ],
+        "subtotal": [
+          "Rp 54.000"
+        ],
+        "tax_amount": [
+          "Rp 5.400"
+        ],
+        "total_amount": [
+          "Rp 59.400"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_016",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_016.png",
+      "sha256": "090f7d598707ac5ec3d687511113fec45e560a7f018aa725f04d99a2c3133baa",
+      "expected": {
+        "description": [
+          "TT"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [
+          "20,000"
+        ],
+        "line_total": [
+          "20,000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "20,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_017",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_017.png",
+      "sha256": "0b69682e64074165576cb79236a64b5602ad75b94c39db611ed69a2f363c9c08",
+      "expected": {
+        "description": [
+          "LEMONADE 16OZ"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [
+          "20,000"
+        ],
+        "line_total": [
+          "20,000"
+        ],
+        "subtotal": [
+          "20,000"
+        ],
+        "tax_amount": [],
+        "total_amount": [
+          "20,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_018",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_018.png",
+      "sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "expected": {
+        "description": [
+          "beef C roll 3pcs",
+          "kaya bred"
+        ],
+        "quantity": [
+          "1",
+          "1"
+        ],
+        "unit_price": [
+          "10,000",
+          "15,000"
+        ],
+        "line_total": [
+          "10,000",
+          "15,000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "25,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_development_019",
+      "split": "development",
+      "image": "evals/cord/development/cord_development_019.png",
+      "sha256": "885c954fff1d2b298ada955f5c48cb0b5bac0a9ab31e23825f3719c4c8ca340d",
+      "expected": {
+        "description": [
+          "FUTAMI 17 GREEN TEA (CLAS",
+          "EGG TART",
+          "GRAIN CROQUE MONSIEUR"
+        ],
+        "quantity": [
+          "1",
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "12,500",
+          "13,000",
+          "17,000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "42,500"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_000",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_000.png",
+      "sha256": "8612d04b70f430f3aef07fbbd5200e382dcc4152b344cc2eff9f735f05a257c8",
+      "expected": {
+        "description": [
+          "-TICKET CP"
+        ],
+        "quantity": [
+          "2"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "60.000"
+        ],
+        "subtotal": [
+          "60.000"
+        ],
+        "tax_amount": [
+          "5.455"
+        ],
+        "total_amount": [
+          "60.000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_001",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_001.png",
+      "sha256": "5852cbe48df03646524e717e987eb3d0ac329a52fd192070b5fda1222a053789",
+      "expected": {
+        "description": [
+          "J.STB PROMO",
+          "Y.B.BAT",
+          "Y.BASO PROM"
+        ],
+        "quantity": [],
+        "unit_price": [],
+        "line_total": [
+          "17500",
+          "46000",
+          "27500"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "91000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_002",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_002.png",
+      "sha256": "571ac6af26e75de8c06747a8c536c778f19a4562879090813571eddc74603d34",
+      "expected": {
+        "description": [
+          "JASMINE MT ( L )"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "24,000"
+        ],
+        "subtotal": [
+          "28,000"
+        ],
+        "tax_amount": [],
+        "total_amount": [
+          "28,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_003",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_003.png",
+      "sha256": "8f73f0c4803ea8815040a50e3389d4f3fa15e8c28cb6d50ea9854f6f6c22bd63",
+      "expected": {
+        "description": [
+          "DONAT GULA"
+        ],
+        "quantity": [
+          "1X"
+        ],
+        "unit_price": [
+          "@11000"
+        ],
+        "line_total": [
+          "11,000"
+        ],
+        "subtotal": [
+          "11,000"
+        ],
+        "tax_amount": [],
+        "total_amount": [
+          "11,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_004",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_004.png",
+      "sha256": "8f3eee7068c96e86cdb2e4b5c53085cb5e1439462edd55c373548cb1962801ad",
+      "expected": {
+        "description": [
+          "ICE BLACKCOFFE",
+          "AVOCADO COFFEE",
+          "CHIKEN KATSU FF"
+        ],
+        "quantity": [
+          "2",
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "82,000",
+          "61,000",
+          "51,000"
+        ],
+        "subtotal": [
+          "194,000"
+        ],
+        "tax_amount": [],
+        "total_amount": [
+          "174,600"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_005",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_005.png",
+      "sha256": "0b63b666b54ea615d1d05733ee2c6fc24f20e1a6c77b333872fa80fff28b2c48",
+      "expected": {
+        "description": [
+          "TRAD KY TOAST CARTE"
+        ],
+        "quantity": [],
+        "unit_price": [],
+        "line_total": [
+          "28.182"
+        ],
+        "subtotal": [
+          "28.182"
+        ],
+        "tax_amount": [
+          "2.818"
+        ],
+        "total_amount": [
+          "31.000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_006",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_006.png",
+      "sha256": "1c091eb7436b3e5a813eb6492c0350ef4eb14e3fdad78d42da35df669c757292",
+      "expected": {
+        "description": [
+          "EGG TART",
+          "CHOCO CUS ARD PASTRY",
+          "REDBEAN BREAD"
+        ],
+        "quantity": [
+          "1",
+          "2",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "13,000",
+          "24,000",
+          "9,000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "46,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_007",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_007.png",
+      "sha256": "810d3545f4105b19757c4b8b35934a477cde8cd1875302d9092315d2f960ef93",
+      "expected": {
+        "description": [
+          "Kupon 15"
+        ],
+        "quantity": [],
+        "unit_price": [],
+        "line_total": [
+          "100,000"
+        ],
+        "subtotal": [
+          "100,909"
+        ],
+        "tax_amount": [
+          "10,091"
+        ],
+        "total_amount": [
+          "111,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_008",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_008.png",
+      "sha256": "58716693a6c0733358e66e64d7064a5a845424280bb55f9b5fa137b1af8c92fe",
+      "expected": {
+        "description": [
+          "[REG] BLACK SAKURA"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "45,455"
+        ],
+        "subtotal": [
+          "45,455"
+        ],
+        "tax_amount": [
+          "4,545"
+        ],
+        "total_amount": [
+          "50,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_009",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_009.png",
+      "sha256": "0411c4d9beb9be65165fdb70c2b60f8bbf9035cc9661be2b8d4c73bbfcff7972",
+      "expected": {
+        "description": [
+          "Bumbu Kaldu Ayam 1"
+        ],
+        "quantity": [],
+        "unit_price": [
+          "36000"
+        ],
+        "line_total": [
+          "36000"
+        ],
+        "subtotal": [
+          "36000"
+        ],
+        "tax_amount": [],
+        "total_amount": []
+      }
+    },
+    {
+      "case_id": "cord_held_out_010",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_010.png",
+      "sha256": "2a5d18c199bdbb75010a54430429cf694b35bdca8bf560d1d0db1fbb090dedb8",
+      "expected": {
+        "description": [
+          "CINNAMON SUGAR"
+        ],
+        "quantity": [
+          "1 x"
+        ],
+        "unit_price": [
+          "17,000"
+        ],
+        "line_total": [
+          "17,000"
+        ],
+        "subtotal": [
+          "17,000"
+        ],
+        "tax_amount": [],
+        "total_amount": [
+          "17,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_011",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_011.png",
+      "sha256": "d92479ab212713e7a65e56aacc5e68c0713597476608cbc394d997971043010b",
+      "expected": {
+        "description": [
+          "BANABERRY FRESH CREAM CAK"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "230,000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "230,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_012",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_012.png",
+      "sha256": "b5f8a3a9a5431b8e38a8e5a16011d6a5a457f7ae4c4ef31da77e589c0b1ad882",
+      "expected": {
+        "description": [
+          "BLUS WANITA",
+          "SHOPPING BAG"
+        ],
+        "quantity": [
+          "1",
+          "1"
+        ],
+        "unit_price": [
+          "@120,000",
+          "@880"
+        ],
+        "line_total": [],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "120,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_013",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_013.png",
+      "sha256": "ca4bf89562b3f55c2c91968ca221a629e48386744a5322596d9c7345648ada13",
+      "expected": {
+        "description": [
+          "BASO KUAH",
+          "A.MINERAL GELAS"
+        ],
+        "quantity": [
+          "1",
+          "1"
+        ],
+        "unit_price": [
+          "43.636",
+          "3,000"
+        ],
+        "line_total": [
+          "43.636",
+          "3,000"
+        ],
+        "subtotal": [
+          "46.636",
+          "46.636"
+        ],
+        "tax_amount": [
+          "4.664"
+        ],
+        "total_amount": [
+          "51.300"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_014",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_014.png",
+      "sha256": "9dcf1f9f86c909b762767cb07d1cc0db30773d556154ce42e0210f65270ee39d",
+      "expected": {
+        "description": [
+          "RedVelvet Cheese Slc",
+          "Chicken Baked Rice",
+          "Fish n Chips",
+          "Mushroom Soup",
+          "Chamomile",
+          "Iced Tea"
+        ],
+        "quantity": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "38,000",
+          "55,000",
+          "65,000",
+          "35,000",
+          "25,000",
+          "20,000"
+        ],
+        "subtotal": [
+          "238,000"
+        ],
+        "tax_amount": [
+          "25,585"
+        ],
+        "total_amount": [
+          "281,435"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_015",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_015.png",
+      "sha256": "f1cd67a7d67d04ba8d5b685553b1b5addbf2039d5954ab08c92139c0ad88a796",
+      "expected": {
+        "description": [
+          "Lemon Tea (L)",
+          "Caramel Small"
+        ],
+        "quantity": [
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "25.000",
+          "38.000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "63.000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_016",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_016.png",
+      "sha256": "eef326565b3945217a69afd84c893afdffd03a2f487943661c2423e6d6ec0d7d",
+      "expected": {
+        "description": [
+          "[LG] BLACK SAKURA",
+          "IVINERAL WATER (bundling) 5k"
+        ],
+        "quantity": [
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "59,091",
+          "4,545"
+        ],
+        "subtotal": [
+          "63,636"
+        ],
+        "tax_amount": [
+          "6,364"
+        ],
+        "total_amount": [
+          "70,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_017",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_017.png",
+      "sha256": "4322ab5ec4f0b1365e08af0c31288e65e8cbd2c8eb5241adfb329244acbbb30b",
+      "expected": {
+        "description": [
+          "Goblin's Mace",
+          "Mozarella Hot Dog",
+          "Chili Pepper Croquette",
+          "Cheese Croquette",
+          "Plastik Amook",
+          "Plastik Putih Take Away"
+        ],
+        "quantity": [
+          "1",
+          "2",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "25,000",
+          "38,000",
+          "14,000",
+          "14,000",
+          "0",
+          "0"
+        ],
+        "subtotal": [
+          "91,000"
+        ],
+        "tax_amount": [],
+        "total_amount": [
+          "Rp. 91,000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_018",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_018.png",
+      "sha256": "88c35bbd2e2a634e89f2c5bfd30f7b530b1082c1f4e6e7cb3cb913f0b46c3868",
+      "expected": {
+        "description": [
+          "Propolis Cair"
+        ],
+        "quantity": [
+          "1"
+        ],
+        "unit_price": [
+          "156000"
+        ],
+        "line_total": [
+          "156000"
+        ],
+        "subtotal": [],
+        "tax_amount": [],
+        "total_amount": [
+          "156000"
+        ]
+      }
+    },
+    {
+      "case_id": "cord_held_out_019",
+      "split": "held_out",
+      "image": "evals/cord/held_out/cord_held_out_019.png",
+      "sha256": "b076921ed83bdf900cab539f219cac8dddfaa4a99c13f7d66d7303d9f8c4c8c7",
+      "expected": {
+        "description": [
+          "AMBUSH DBL CHS",
+          "AMBUSH CHS BUR"
+        ],
+        "quantity": [
+          "4",
+          "10"
+        ],
+        "unit_price": [],
+        "line_total": [
+          "60000",
+          "100000"
+        ],
+        "subtotal": [
+          "160000"
+        ],
+        "tax_amount": [
+          "16000"
+        ],
+        "total_amount": [
+          "176000"
+        ]
+      }
+    }
+  ]
+}

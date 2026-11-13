@@ -1,0 +1,13 @@
+{
+  "run_at_utc": "2026-10-06T07:30:43.864115+00:00",
+  "selected_agent": "gemini-3.1-flash-lite",
+  "selected_judge": "gemini-3.1-flash-lite",
+  "temperature": 0,
+  "limitations": [
+    "same-model judge"
+  ],
+  "reason": "User requested Gemini 2.5 Flash or cheaper; 2.5 Flash and Flash-Lite returned HTTP 404; 3.1 Flash-Lite succeeded",
+  "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing",
+  "input_usd_per_million_tokens": 0.25,
+  "output_usd_per_million_tokens": 1.5
+}

@@ -1,0 +1,94 @@
+{
+  "invoice": {
+    "document_id": "invoice",
+    "document_type": "invoice",
+    "document_number": "DEMO-invoice",
+    "vendor_name": "Demo Vendor",
+    "currency": "USD",
+    "line_items": [],
+    "subtotal": 0,
+    "total_amount": 0,
+    "field_evidence": {
+      "vendor_name": {
+        "document_id": "invoice",
+        "page": 1,
+        "text": "Vendor: Demo Vendor",
+        "bbox": [
+          0.07360130509519888,
+          0.1062172013099747,
+          0.2526029200335733,
+          0.11631435818142366
+        ],
+        "confidence": 1
+      },
+      "currency": {
+        "document_id": "invoice",
+        "page": 1,
+        "text": "Currency: USD",
+        "bbox": [
+          0.07442810332853031,
+          0.14392929847794345,
+          0.1934150371676177,
+          0.1569431959980666
+        ],
+        "confidence": 1
+      }
+    }
+  },
+  "purchase_order": {
+    "document_id": "purchase_order",
+    "document_type": "purchase_order",
+    "document_number": "DEMO-purchase_order",
+    "vendor_name": "Demo Vendor",
+    "currency": "USD",
+    "line_items": [
+      {
+        "sku": "SKU-A",
+        "description": "Widget",
+        "quantity": 10,
+        "unit_price": 10,
+        "total_price": 100,
+        "evidence": {
+          "document_id": "purchase_order",
+          "page": 1,
+          "text": "SKU-A Widget Qty 10 Price 10 Total 100",
+          "bbox": [
+            0.07433823354883132,
+            0.18179421473031088,
+            0.39732837053685405,
+            0.19482198387685445
+          ],
+          "confidence": 1
+        }
+      }
+    ],
+    "subtotal": 100,
+    "total_amount": 100,
+    "field_evidence": {
+      "vendor_name": {
+        "document_id": "purchase_order",
+        "page": 1,
+        "text": "Vendor: Demo Vendor",
+        "bbox": [
+          0.07360130509519888,
+          0.1062172013099747,
+          0.2526029200335733,
+          0.11631435818142366
+        ],
+        "confidence": 1
+      },
+      "currency": {
+        "document_id": "purchase_order",
+        "page": 1,
+        "text": "Currency: USD",
+        "bbox": [
+          0.07442810332853031,
+          0.14392929847794345,
+          0.1934150371676177,
+          0.1569431959980666
+        ],
+        "confidence": 1
+      }
+    }
+  }
+}

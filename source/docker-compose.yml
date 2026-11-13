@@ -1,0 +1,12 @@
+services:
+  reconcile-ai:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      DEFAULT_VISION_MODEL: ${DEFAULT_VISION_MODEL:-gemini-2.5-flash}
+      MAX_ESTIMATED_COST_USD: ${MAX_ESTIMATED_COST_USD:-20}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

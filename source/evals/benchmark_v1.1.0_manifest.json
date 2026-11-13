@@ -1,0 +1,1702 @@
+{
+  "name": "reconcile-ai-benchmark",
+  "version": "1.1.0",
+  "seed": 20260919,
+  "cases": [
+    {
+      "case_id": "case_001",
+      "split": "development",
+      "layout_family": 0,
+      "scenario": "clean",
+      "invoice": "case_001/invoice.pdf",
+      "purchase_order": "case_001/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_002",
+      "split": "development",
+      "layout_family": 1,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_002/invoice.pdf",
+      "purchase_order": "case_002/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 300.0,
+          "total_price": 3000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_003",
+      "split": "development",
+      "layout_family": 2,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_003/invoice.pdf",
+      "purchase_order": "case_003/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 500.0,
+          "total_price": 6000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_004",
+      "split": "development",
+      "layout_family": 0,
+      "scenario": "missing_item",
+      "invoice": "case_004/invoice.pdf",
+      "purchase_order": "case_004/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515,
+        0.28914
+      ]
+    },
+    {
+      "case_id": "case_005",
+      "split": "development",
+      "layout_family": 1,
+      "scenario": "clean",
+      "invoice": "case_005/invoice.pdf",
+      "purchase_order": "case_005/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_006",
+      "split": "development",
+      "layout_family": 2,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_006/invoice.pdf",
+      "purchase_order": "case_006/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1300.0,
+          "total_price": 13000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_007",
+      "split": "development",
+      "layout_family": 0,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_007/invoice.pdf",
+      "purchase_order": "case_007/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 500.0,
+          "total_price": 6000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_008",
+      "split": "development",
+      "layout_family": 1,
+      "scenario": "missing_item",
+      "invoice": "case_008/invoice.pdf",
+      "purchase_order": "case_008/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331,
+        0.24588
+      ]
+    },
+    {
+      "case_id": "case_009",
+      "split": "development",
+      "layout_family": 2,
+      "scenario": "clean",
+      "invoice": "case_009/invoice.pdf",
+      "purchase_order": "case_009/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_010",
+      "split": "development",
+      "layout_family": 0,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_010/invoice.pdf",
+      "purchase_order": "case_010/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1300.0,
+          "total_price": 13000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_011",
+      "split": "development",
+      "layout_family": 1,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_011/invoice.pdf",
+      "purchase_order": "case_011/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 500.0,
+          "total_price": 6000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_012",
+      "split": "development",
+      "layout_family": 2,
+      "scenario": "missing_item",
+      "invoice": "case_012/invoice.pdf",
+      "purchase_order": "case_012/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515,
+        0.28914
+      ]
+    },
+    {
+      "case_id": "case_013",
+      "split": "development",
+      "layout_family": 0,
+      "scenario": "clean",
+      "invoice": "case_013/invoice.pdf",
+      "purchase_order": "case_013/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_014",
+      "split": "development",
+      "layout_family": 1,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_014/invoice.pdf",
+      "purchase_order": "case_014/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 550.0,
+          "total_price": 5500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_015",
+      "split": "development",
+      "layout_family": 2,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_015/invoice.pdf",
+      "purchase_order": "case_015/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 250.0,
+          "total_price": 3000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_016",
+      "split": "development",
+      "layout_family": 0,
+      "scenario": "missing_item",
+      "invoice": "case_016/invoice.pdf",
+      "purchase_order": "case_016/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515,
+        0.28914
+      ]
+    },
+    {
+      "case_id": "case_017",
+      "split": "development",
+      "layout_family": 1,
+      "scenario": "clean",
+      "invoice": "case_017/invoice.pdf",
+      "purchase_order": "case_017/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_018",
+      "split": "development",
+      "layout_family": 2,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_018/invoice.pdf",
+      "purchase_order": "case_018/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 550.0,
+          "total_price": 5500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_019",
+      "split": "development",
+      "layout_family": 0,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_019/invoice.pdf",
+      "purchase_order": "case_019/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 1250.0,
+          "total_price": 15000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_020",
+      "split": "development",
+      "layout_family": 1,
+      "scenario": "missing_item",
+      "invoice": "case_020/invoice.pdf",
+      "purchase_order": "case_020/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331,
+        0.24588
+      ]
+    },
+    {
+      "case_id": "case_021",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "clean",
+      "invoice": "case_021/invoice.pdf",
+      "purchase_order": "case_021/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_022",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_022/invoice.pdf",
+      "purchase_order": "case_022/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 550.0,
+          "total_price": 5500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_023",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_023/invoice.pdf",
+      "purchase_order": "case_023/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 250.0,
+          "total_price": 3000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_024",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "missing_item",
+      "invoice": "case_024/invoice.pdf",
+      "purchase_order": "case_024/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331,
+        0.24588
+      ]
+    },
+    {
+      "case_id": "case_025",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "clean",
+      "invoice": "case_025/invoice.pdf",
+      "purchase_order": "case_025/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_026",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_026/invoice.pdf",
+      "purchase_order": "case_026/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1300.0,
+          "total_price": 13000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_027",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_027/invoice.pdf",
+      "purchase_order": "case_027/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 500.0,
+          "total_price": 6000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_028",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "missing_item",
+      "invoice": "case_028/invoice.pdf",
+      "purchase_order": "case_028/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331,
+        0.24588
+      ]
+    },
+    {
+      "case_id": "case_029",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "clean",
+      "invoice": "case_029/invoice.pdf",
+      "purchase_order": "case_029/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_030",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_030/invoice.pdf",
+      "purchase_order": "case_030/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1300.0,
+          "total_price": 13000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_031",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_031/invoice.pdf",
+      "purchase_order": "case_031/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 250.0,
+          "total_price": 3000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_032",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "missing_item",
+      "invoice": "case_032/invoice.pdf",
+      "purchase_order": "case_032/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515,
+        0.28914
+      ]
+    },
+    {
+      "case_id": "case_033",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "clean",
+      "invoice": "case_033/invoice.pdf",
+      "purchase_order": "case_033/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_034",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_034/invoice.pdf",
+      "purchase_order": "case_034/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1300.0,
+          "total_price": 13000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_035",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_035/invoice.pdf",
+      "purchase_order": "case_035/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 250.0,
+          "total_price": 3000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_036",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "missing_item",
+      "invoice": "case_036/invoice.pdf",
+      "purchase_order": "case_036/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331,
+        0.24588
+      ]
+    },
+    {
+      "case_id": "case_037",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "clean",
+      "invoice": "case_037/invoice.pdf",
+      "purchase_order": "case_037/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_038",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_038/invoice.pdf",
+      "purchase_order": "case_038/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 550.0,
+          "total_price": 5500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_039",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_039/invoice.pdf",
+      "purchase_order": "case_039/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 500.0,
+          "total_price": 6000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_040",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "missing_item",
+      "invoice": "case_040/invoice.pdf",
+      "purchase_order": "case_040/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331,
+        0.24588
+      ]
+    },
+    {
+      "case_id": "case_041",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "clean",
+      "invoice": "case_041/invoice.pdf",
+      "purchase_order": "case_041/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_042",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_042/invoice.pdf",
+      "purchase_order": "case_042/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 300.0,
+          "total_price": 3000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_043",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_043/invoice.pdf",
+      "purchase_order": "case_043/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 250.0,
+          "total_price": 3000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_044",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "missing_item",
+      "invoice": "case_044/invoice.pdf",
+      "purchase_order": "case_044/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515,
+        0.28914
+      ]
+    },
+    {
+      "case_id": "case_045",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "clean",
+      "invoice": "case_045/invoice.pdf",
+      "purchase_order": "case_045/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_046",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_046/invoice.pdf",
+      "purchase_order": "case_046/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 550.0,
+          "total_price": 5500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_047",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "quantity_mismatch",
+      "invoice": "case_047/invoice.pdf",
+      "purchase_order": "case_047/purchase_order.pdf",
+      "expected_discrepancies": [
+        "quantity_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 12,
+          "unit_price": 250.0,
+          "total_price": 3000.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    },
+    {
+      "case_id": "case_048",
+      "split": "held_out",
+      "layout_family": 5,
+      "scenario": "missing_item",
+      "invoice": "case_048/invoice.pdf",
+      "purchase_order": "case_048/purchase_order.pdf",
+      "expected_discrepancies": [
+        "missing_item"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        },
+        {
+          "sku": "SVC-9",
+          "description": "Expedited handling",
+          "quantity": 1,
+          "unit_price": 900.0,
+          "total_price": 900.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 250.0,
+          "total_price": 2500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331,
+        0.24588
+      ]
+    },
+    {
+      "case_id": "case_049",
+      "split": "held_out",
+      "layout_family": 3,
+      "scenario": "clean",
+      "invoice": "case_049/invoice.pdf",
+      "purchase_order": "case_049/purchase_order.pdf",
+      "expected_discrepancies": [],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 1250.0,
+          "total_price": 12500.0
+        }
+      ],
+      "row_top_fractions": [
+        0.22331
+      ]
+    },
+    {
+      "case_id": "case_050",
+      "split": "held_out",
+      "layout_family": 4,
+      "scenario": "unit_price_mismatch",
+      "invoice": "case_050/invoice.pdf",
+      "purchase_order": "case_050/purchase_order.pdf",
+      "expected_discrepancies": [
+        "unit_price_mismatch",
+        "line_total_mismatch"
+      ],
+      "invoice_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 550.0,
+          "total_price": 5500.0
+        }
+      ],
+      "purchase_order_items": [
+        {
+          "sku": "SKU-42",
+          "description": "Network appliance",
+          "quantity": 10,
+          "unit_price": 500.0,
+          "total_price": 5000.0
+        }
+      ],
+      "row_top_fractions": [
+        0.26515
+      ]
+    }
+  ]
+}
