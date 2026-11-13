@@ -1,44 +1,40 @@
-# research reconcileai · 内容项目
+# ReconcileAI: A Closer Look
 
-围绕 research reconcileai 主题整理选题、资料、脚本和制作工程。
+**Research and evaluation material for a reconciliation-tool topic, with source checks and the limits of the investigation.**
 
-GitHub：[eli-ovops/media-research-reconcileai](https://github.com/eli-ovops/media-research-reconcileai)
+## What you will find
 
-## 内容
+Research material with its sources, assumptions and working trail kept available. Dated observations remain dated; a report or model is not proof of a current result.
 
-本次公开副本包含 84 个来源文件。
+## Start here
 
-- [`check.py`](check.py)
-- [`dependencies.txt`](dependencies.txt)
-- [`results.json`](results.json)
-- [`验证报告.md`](%E9%AA%8C%E8%AF%81%E6%8A%A5%E5%91%8A.md)
-- [`source/.gitattributes`](source/.gitattributes)
-- [`source/.gitignore`](source/.gitignore)
-- [`source/COMMIT_PLAN.md`](source/COMMIT_PLAN.md)
-- [`source/Dockerfile`](source/Dockerfile)
-- [`source/ERROR_ANALYSIS.md`](source/ERROR_ANALYSIS.md)
-- [`source/LICENSE`](source/LICENSE)
+- [Project guide](source/README.md)
+- [Project guide](source/evals/README.md)
+- [Project guide](source/results/README.md)
+- [Complete source inventory](SOURCE_MANIFEST.csv)
 
-文件类型：.json（31）、.py（30）、.md（11）、.txt（4）、(no extension)（4）、.yml（1）、.toml（1）、.sh（1）。
+## Current scope
 
-## 阅读方式
+This snapshot includes 84 source files. Original media, databases, private account records and other unprocessed attachments were not included in this text-and-source release.
 
-按主题说明、研究记录和相关程序阅读；保留当时的探索状态与已知缺口。
+This update improves the English presentation. It does not rerun the project, install a skill, reproduce an old test, or establish production readiness. Some original working documents retain their source language; machine-specific paths or setup assumptions may still need adaptation.
 
-## 来源与许可
+Market and protocol material is research, not a claim of verified live trading performance or future returns.
 
-本仓库新增介绍及用户原创部分按 MIT 许可公开；第三方材料按其各自许可证和署名使用，不以本许可证重新授权第三方内容。
+## Sources and license
 
-来源文件中记录的公开 GitHub 链接（不表示已逐项独立验证）：
+The owner's original contributions and new presentation notes follow the [retained license](LICENSE). Third-party material keeps its own licenses and attribution; this does not relicense it.
+
+<details>
+<summary>Reference links retained from the source notes</summary>
+
+These links were present in the project material; they have not all been independently reviewed.
+
 - https://github.com/DocuPipe/DocuBench
 - https://github.com/clovaai/cord
 - https://github.com/vi-nayKR/multimodal-document-intelligence
 - https://github.com/vi-nayKR/multimodal-document-intelligence.git
 
-## 当前状态与验证边界
+</details>
 
-- 本次完成公开副本整理和静态检查；没有运行来源代码、构建 App、安装 Skill 或启动服务。
-- 项目可能处于原型、实验或研究阶段；没有将其表述为生产交付、客户验收或经过验证的投资收益。
-- 图片、视频、数据库、真实账户记录及未确认可公开的附件没有随本次文本/源码副本上传。
-- 部分相对链接、运行依赖或素材可能仍需补齐；原始快照中的静态引用缺口数为 0，该数字不是运行失败数。
-- [本次来源文件清单](SOURCE_MANIFEST.csv)
+[Source paths and hashes](SOURCE_MANIFEST.csv)
